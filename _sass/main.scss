@@ -1,9 +1,47 @@
 @import "variables";
 
 nav {
-    color: green;
+    background-color: $nav-background;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: larger;
+    color: $nav-font-color;
+    width: 100%;
+
+    .current {
+      color: black;
+      text-decoration: underline;
+    }
+
+    a {
+      margin-left: 15px;
+      margin-right: 15px;
+      text-decoration: none;
+      color: $nav-font-color;
+    }
   }
 
 body {
+  font-family: 'Manrope';
+  margin: 0;
   background-color: $body-color;
+}
+
+.content {
+  padding-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 500px;
+
+  h1 {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    color: #4a585d;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-bottom-color: #4a585d;
+  }
 }
