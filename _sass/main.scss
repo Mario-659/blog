@@ -2,16 +2,22 @@
 
 nav {
     background-color: $nav-background;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 40px;
     text-align: center;
     font-size: larger;
-    color: $nav-font-color;
-    width: 100%;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0.4rem 0.35rem 0rem 0rem #6ab5c6;
+
+    a:hover {
+      color: $nav-font-color-hover;
+    }
 
     .current {
-      color: black;
-      text-decoration: underline;
+      color: $nav-font-color-selected;
+      font-weight: 1000;
     }
 
     a {
@@ -19,11 +25,13 @@ nav {
       margin-right: 15px;
       text-decoration: none;
       color: $nav-font-color;
+      transition: color .15s ease-in;
     }
   }
 
 body {
   font-family: 'Manrope';
+  color: $font-color;
   margin: 0;
   background-color: $body-color;
 }
@@ -44,4 +52,15 @@ body {
     border-bottom-width: 1.5px;
     border-bottom-color: #4a585d;
   }
+
+  a {
+    color: $link-font-color;
+    text-decoration: none;
+    transition: color .2s ease-in;
+  }
+
+  a:hover {
+    color: $font-color;
+  }
 }
+
