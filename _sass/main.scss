@@ -1,34 +1,5 @@
 @import "variables";
 
-nav {
-    background-color: $nav-background;
-    padding: 20px 40px;
-    text-align: center;
-    font-size: larger;
-    width: fit-content;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0.4rem 0.35rem 0rem 0rem #6ab5c6;
-
-    a:hover {
-      color: $nav-font-color-hover;
-    }
-
-    .current {
-      color: $nav-font-color-selected;
-      font-weight: 1000;
-    }
-
-    a {
-      margin-left: 15px;
-      margin-right: 15px;
-      text-decoration: none;
-      color: $nav-font-color;
-      transition: color .15s ease-in;
-    }
-  }
-
 body {
   font-family: 'Manrope';
   color: $font-color;
@@ -36,31 +7,96 @@ body {
   background-color: $body-color;
 }
 
-.content {
-  padding-top: 50px;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-left: 5%;
-  padding-right: 5%;
-  height: 500px;
+.content {  
 
-  h1 {
-    padding-bottom: 30px;
-    margin-bottom: 50px;
-    color: #4a585d;
-    border-bottom-style: solid;
-    border-bottom-width: 1.5px;
-    border-bottom-color: #4a585d;
+  @media only screen and (max-width: 600px) {
+    padding: 50px 10px;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    padding: 50px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    padding: 50px 150px;
   }
 
-  a {
-    color: $link-font-color;
-    text-decoration: none;
-    transition: color .2s ease-in;
+  @media only screen and (min-width: 1200px) {
+    padding: 50px 300px;
   }
 
-  a:hover {
-    color: $font-color;
+  @media only screen and (min-width: 1360px) {
+    padding: 50px 400px;
   }
 }
 
+h1 {
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  border-bottom-style: solid;
+  border-bottom-width: 1.75px;
+  border-bottom-color: #4a585d;
+}
+
+a {
+  color: $link-font-color;
+  text-decoration: none;
+  transition: color .2s ease-in;
+}
+
+a:hover {
+  color: $font-color;
+}
+
+nav {
+  background-color: $nav-background;
+
+  text-align: center;
+  font-size: larger;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  border-radius: 10px;
+  box-shadow: 0.4rem 0.35rem 0rem 0rem #6ab5c6;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-basis: 20px;
+  justify-content: space-evenly;
+
+  min-width: $nav-min-width;
+  max-width: $nav-max-width;    
+  
+  padding: 10px 0;
+  
+  margin: auto;
+  margin-top: 20px;
+
+  
+  @media only screen and (max-width: ($nav-max-width + 5px)) {
+    // add margin for border shadow
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+
+  a:hover {
+    color: $nav-font-color-hover;
+  }
+
+  .current {
+    color: $nav-font-color-selected;
+    font-weight: 1000;
+  }
+
+  a {
+    text-decoration: none;
+    color: $nav-font-color;
+    transition: color .15s ease-in;
+  }
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
