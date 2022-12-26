@@ -1,0 +1,16 @@
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1.25px;
+    border-bottom-color: #4a585d;
+}
+
+.post-list h2 a {
+    border-bottom: none;
+}

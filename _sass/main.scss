@@ -26,7 +26,11 @@ body {
   }
 
   @media only screen and (min-width: 1360px) {
-    padding: 50px 400px;
+    padding: 50px 600px;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    padding: 50px 600px;
   }
 }
 
@@ -42,14 +46,16 @@ a {
   color: $link-font-color;
   text-decoration: none;
   transition: color .2s ease-in;
+  border-bottom: 2px solid $link-underline-color;
+  box-sizing: border-box;
 }
 
 a:hover {
-  color: $font-color;
+  color: $link-font-hover-color;
 }
 
 nav {
-  background-color: $nav-background;
+  background-color: $nav-background-color;
 
   text-align: center;
   font-size: larger;
@@ -57,7 +63,7 @@ nav {
   white-space: nowrap;
 
   border-radius: 10px;
-  box-shadow: 0.4rem 0.35rem 0rem 0rem #6ab5c6;
+  box-shadow: 0.4rem 0.35rem 0rem 0rem $nav-shadow-color;
 
   display: flex;
   flex-direction: row;
@@ -69,16 +75,7 @@ nav {
   max-width: $nav-max-width;    
   
   padding: 10px 0;
-  
   margin: auto;
-  margin-top: 20px;
-
-  
-  @media only screen and (max-width: ($nav-max-width + 5px)) {
-    // add margin for border shadow
-    margin-right: 5px;
-    margin-top: 10px;
-  }
 
   a:hover {
     color: $nav-font-color-hover;
@@ -92,11 +89,32 @@ nav {
   a {
     text-decoration: none;
     color: $nav-font-color;
-    transition: color .15s ease-in;
+    transition: color .15s ease-out;
+    border-bottom: none;
   }
 }
 
 img {
   height: auto;
   width: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding-top: 20px;
+
+  @media only screen and (max-width: ($nav-max-width + 5px)) {
+    // add padding for border shadow
+    padding-right: 5px;
+    padding-top: 10px;
+  }
 }
